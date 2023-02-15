@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">lab 19 - GraphAPI Omelko</string>
+    <string name="btnLogin">Войти</string>
+    <string name="btnRegister">Регистрация</string>
+    <string name="btnSetting">Настройки</string>
+    <string name="swtRemPas">Запомнить</string>
+    <string name="tvLogin">Логин:</string>
+    <string name="tvPassword">Пароль:</string>
+    <string name="tvSignInTitle">Авторизация</string>
+    <string name="msgLoginSecceed">Успешный вход</string>
+    <string name="txtOk">Ок</string>
+    <string name="txtCancel">Отмена</string>
+    <string name="msgIncorrectLoginPassword">Неверный логин или пароль.</string>
+    <string name="txtInfo">Информация</string>
+    <string name="msgRequestFailed">Запрос провален.</string>
+    <string name="txtError">Ошибка</string>
+    <string name="txtWarning">Предупреждение</string>
+    <string name="txtApply">Применить</string>
+</resources>

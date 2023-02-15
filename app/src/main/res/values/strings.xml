@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">lab 19 - GraphAPI Omelko</string>
+    <string name="msgLoginSecceed">Login succeed.</string>
+    <string name="msgIncorrectLoginPassword">Login or password is uncorrected.</string>
+    <string name="msgRequestFailed">Request failed.</string>
+    <string name="btnLogin">Sign in</string>
+    <string name="btnRegister">Sign up</string>
+    <string name="btnSetting">Settings</string>
+    <string name="swtRemPas">Remember</string>
+    <string name="tvLogin">Login:</string>
+    <string name="tvPassword">Password:</string>
+    <string name="tvSignInTitle">Authorization</string>
+    <string name="txtOk">Ok</string>
+    <string name="txtApply">Apply</string>
+    <string name="txtCancel">Cancel</string>
+    <string name="txtInfo">Info</string>
+    <string name="txtError">Error</string>
+    <string name="txtWarning">Warning</string>
+
+
+</resources>
