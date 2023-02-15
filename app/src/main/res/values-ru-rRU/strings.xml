@@ -17,4 +17,5 @@
     <string name="txtError">Ошибка</string>
     <string name="txtWarning">Предупреждение</string>
     <string name="txtApply">Применить</string>
+    <string name="btnSessionList">Список сессий</string>
 </resources>

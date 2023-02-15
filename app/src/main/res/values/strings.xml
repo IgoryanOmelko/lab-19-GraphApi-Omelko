@@ -6,6 +6,7 @@
     <string name="btnLogin">Sign in</string>
     <string name="btnRegister">Sign up</string>
     <string name="btnSetting">Settings</string>
+    <string name="btnSessionList">List of sessions</string>
     <string name="swtRemPas">Remember</string>
     <string name="tvLogin">Login:</string>
     <string name="tvPassword">Password:</string>
