@@ -93,8 +93,9 @@ public final class User {
      * Method reading user data from database and set properties
      */
     public static void getSettings(){
-        StaticData.DB.SetSettingsPassword(password);
-        StaticData.DB.SetSettingsToken(token);
-        StaticData.DB.SetSettingsCSTR(cstr);
+        User.name=StaticData.DB.GetSettingsName();
+        User.password=StaticData.DB.GetSettingsPassword();
+        User.token=StaticData.DB.GetSettingsToken();
+        User.cstr=StaticData.DB.GetSettingsCSTR();
     }
 }

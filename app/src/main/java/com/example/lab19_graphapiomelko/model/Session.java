@@ -13,31 +13,33 @@ import java.util.GregorianCalendar;
 public class Session {
     public int id;
     public String token;
-    public String timestamp;
+    public Date date;
 
     public Session(int id, String token, String timestamp) {
         this.id = id;
         this.token = token;
-        this.timestamp = timestamp;
+        this.date = getDate(timestamp);
     }
 
 
-    public Session(JSONObject obj) throws JSONException {
-        id = obj.getInt("id");
-        token = obj.getString("token");
-        timestamp = obj.getString("timestamp");
-    }
+//    public Session(JSONObject obj) throws JSONException {
+//        id = obj.getInt("id");
+//        token = obj.getString("token");
+//        timestamp = obj.getString("timestamp");
+//    }
 
     //@RequiresApi(api = Build.VERSION_CODES.O)
-    public String date(String s) {
-        GregorianCalendar calendar = new GregorianCalendar(1, 0, 1);
-        calendar.setTimeInMillis(calendar.getTimeInMillis() + Long.valueOf(s) * 1000);
-        Date date = calendar.getTime();
-        return date.toGMTString();
+    public Date getDate(String s) {
+//        GregorianCalendar calendar = new GregorianCalendar(1, 0, 1);
+//        calendar.setTimeInMillis(calendar.getTimeInMillis() + Long.valueOf(s) * 1000);
+//        Date date = calendar.getTime();
+//        return date.toGMTString();
+        return new Date( Long.valueOf(s)*1000);
     }
 
     //@RequiresApi(api = Build.VERSION_CODES.O)
     public String toString() {
-        return "(" + String.valueOf(id) + ")" + token + " " + date(timestamp);
+        return "(" + String.valueOf(id) + ")" + token + " " + date.toString();
+
     }
 }

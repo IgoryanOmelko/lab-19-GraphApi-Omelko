@@ -3,6 +3,8 @@
     <string name="msgLoginSecceed">Login succeed.</string>
     <string name="msgIncorrectLoginPassword">Login or password is uncorrected.</string>
     <string name="msgRequestFailed">Request failed.</string>
+    <string name="msgInvalidToken">Invalid token.</string>
+    <string name="msgPleaseSignIn">Please sign in.</string>
     <string name="btnLogin">Sign in</string>
     <string name="btnRegister">Sign up</string>
     <string name="btnSetting">Settings</string>

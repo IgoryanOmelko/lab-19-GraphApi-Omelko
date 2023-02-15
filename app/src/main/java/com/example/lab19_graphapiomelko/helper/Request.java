@@ -83,6 +83,7 @@ public class Request {
                     con.disconnect();
                     final String res = str;
                     output = res;
+                    isSuccessful=true;
 //                    ctx.runOnUiThread(() -> {
 //                        try{onSuccess(res);} catch (Exception e){}
 //                    });

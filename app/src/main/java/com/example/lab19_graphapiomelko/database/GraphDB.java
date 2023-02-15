@@ -45,7 +45,7 @@ public class GraphDB extends SQLiteOpenHelper {
     public void SetSettings(String cstr) {
         SQLiteDatabase db = getWritableDatabase();
         int id = 0;
-        String querySetID = "INSERT INTO settings VALUES('" + id + "',null,null,null,'" + cstr + "');";
+        String querySetID = "INSERT INTO settings VALUES('" + id + "','"+null+"','"+null+"','"+null+"','" + cstr + "');";
         try {
             db.execSQL(querySetID);
         } catch (SQLException ex) {
@@ -75,7 +75,7 @@ public class GraphDB extends SQLiteOpenHelper {
     public int GetSettingsID() {
         SQLiteDatabase db = getReadableDatabase();
         int ID = 0;
-        String query = "SELECT (id) FROM settings WHERE id ='" + id + "';";
+        String query = "SELECT (id) FROM settings";
         try{
             Cursor cursor = db.rawQuery(query, null);
             if (cursor.moveToFirst() == true) {
@@ -111,11 +111,11 @@ public class GraphDB extends SQLiteOpenHelper {
     public String GetSettingsName() {
         SQLiteDatabase db = getReadableDatabase();
         String name = "";
-        String query = "SELECT (name) FROM settings WHERE id ='" + id + "';";
+        String query = "SELECT (name) FROM settings WHERE id = 0";
         try{
             Cursor cursor = db.rawQuery(query, null);
             if (cursor.moveToFirst() == true) {
-                name = cursor.getString(1);
+                name = cursor.getString(0);
                 return name;
             } else {
                 return "";
@@ -140,6 +140,27 @@ public class GraphDB extends SQLiteOpenHelper {
             ex.printStackTrace();
         }
     }
+    /**
+     * Methode read password from settings table from database
+     * @return value of password
+     */
+    public String GetSettingsPassword() {
+        SQLiteDatabase db = getReadableDatabase();
+        String password = "";
+        String query = "SELECT (password) FROM settings WHERE id = 0";
+        try{
+            Cursor cursor = db.rawQuery(query, null);
+            if (cursor.moveToFirst() == true) {
+                password = cursor.getString(0);
+                return password;
+            } else {
+                return "";
+            }
+        }catch (SQLException ex){
+            ex.printStackTrace();
+            return "";
+        }
+    }
 
     /**
      * Method is recording token in setting table
@@ -155,7 +176,27 @@ public class GraphDB extends SQLiteOpenHelper {
             ex.printStackTrace();
         }
     }
-
+    /**
+     * Methode read token from settings table from database
+     * @return value of token
+     */
+    public String GetSettingsToken() {
+        SQLiteDatabase db = getReadableDatabase();
+        String token = "";
+        String query = "SELECT (token) FROM settings WHERE id = 0";
+        try{
+            Cursor cursor = db.rawQuery(query, null);
+            if (cursor.moveToFirst() == true) {
+                token = cursor.getString(0);
+                return token;
+            } else {
+                return "";
+            }
+        }catch (SQLException ex){
+            ex.printStackTrace();
+            return "";
+        }
+    }
     /**
      * Method is recording connection string in setting table
      *
@@ -170,7 +211,27 @@ public class GraphDB extends SQLiteOpenHelper {
             ex.printStackTrace();
         }
     }
-
+    /**
+     * Methode read connection string from settings table from database
+     * @return value of connection string
+     */
+    public String GetSettingsCSTR() {
+        SQLiteDatabase db = getReadableDatabase();
+        String cstr = "";
+        String query = "SELECT (cstr) FROM settings WHERE id = 0";
+        try{
+            Cursor cursor = db.rawQuery(query, null);
+            if (cursor.moveToFirst() == true) {
+                cstr = cursor.getString(0);
+                return cstr;
+            } else {
+                return "";
+            }
+        }catch (SQLException ex){
+            ex.printStackTrace();
+            return "";
+        }
+    }
 
     /**
      * Method is deleting data from setting table
