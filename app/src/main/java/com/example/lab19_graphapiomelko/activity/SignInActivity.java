@@ -4,13 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.RestrictionEntry;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -24,11 +22,9 @@ import com.example.lab19_graphapiomelko.model.Session;
 import com.example.lab19_graphapiomelko.model.User;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 
 public class SignInActivity extends AppCompatActivity {
@@ -88,6 +84,17 @@ public class SignInActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method executes actions by call this activity when calling this activity from another activity
+     * @param requestCode The integer request code originally supplied to
+     *                    startActivityForResult(), allowing you to identify who this
+     *                    result came from.
+     * @param resultCode The integer result code returned by the child activity
+     *                   through its setResult().
+     * @param data An Intent, which can return result data to the caller
+     *               (various data can be attached to Intent "extras").
+     *
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         validToken=false;
@@ -113,6 +120,15 @@ public class SignInActivity extends AppCompatActivity {
             }
         }
     }
+    /**
+     * Actions by click on register button
+     *
+     * @param v
+     */
+    public void onBtnRegisterClick(View v) {
+        Intent i = new Intent(ctx, SignUpActivity.class);
+        startActivityForResult(i, StaticData.LoginToRegisterCode.getCode());
+    }
 
     /**
      * Actions by click on set setting button
@@ -121,17 +137,18 @@ public class SignInActivity extends AppCompatActivity {
      */
     public void onBtnSettingClick(View v) {
         AlertDialog.Builder window = new AlertDialog.Builder(ctx);
-        window.setTitle("Adding text");
-        window.setMessage("Enter text");
+        window.setTitle(getResources().getString(R.string.txtCSTR));
+        window.setMessage(getResources().getString(R.string.txtValue));
         final EditText etInput = new EditText(ctx);
         etInput.setText(User.getCSTR());
         window.setView(etInput);
-        window.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+        window.setPositiveButton(getResources().getString(R.string.txtApply), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                User.setCSTR("cstr");
+                User.setCSTR(etInput.getText().toString());
+                StaticData.DB.SetSettingsCSTR(User.getCSTR());
             }
         });
-        window.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        window.setNegativeButton(getResources().getString(R.string.txtCancel), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 return;
             }

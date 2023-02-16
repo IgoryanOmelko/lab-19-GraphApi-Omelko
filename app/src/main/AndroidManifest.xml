@@ -22,6 +22,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activity.SignUpActivity"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+        </activity>
+        <activity
             android:name=".activity.MenuActivity"
             android:exported="true"
             tools:ignore="Instantiatable">

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import com.example.lab19_graphapiomelko.R;
 import com.example.lab19_graphapiomelko.helper.StaticData;
+import com.example.lab19_graphapiomelko.model.User;
 
 
 public class MenuActivity extends AppCompatActivity {
@@ -20,8 +21,10 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        tvUserName = findViewById(R.id.tvUserName);
-        tvCurrentToken=findViewById(R.id.tvCurrentToken);
+        tvUserName = findViewById(R.id.tvUserNameMenu);
+        tvCurrentToken=findViewById(R.id.tvCurrentTokenMenu);
+        tvUserName.setText(User.getName());
+        tvCurrentToken.setText(User.getToken());
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

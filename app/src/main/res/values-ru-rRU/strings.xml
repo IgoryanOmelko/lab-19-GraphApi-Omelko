@@ -20,4 +20,17 @@
     <string name="btnSessionList">Список сессий</string>
     <string name="msgInvalidToken">Недействительный токен</string>
     <string name="msgPleaseSignIn">Пожалуйста авторизируйтесь</string>
+    <string name="btnOk">ОК</string>
+    <string name="btnCancel">Отмена</string>
+    <string name="txtCSTR">Строка подключения</string>
+    <string name="txtValue">Значение:</string>
+    <string name="btnGraphs">Графы</string>
+    <string name="btnSessions">Сессии</string>
+    <string name="btnBack">Назад</string>
+    <string name="btnAccountDelete">Удалить аккаунт</string>
+    <string name="txtMenu">Меню</string>
+    <string name="btnChangePassword">Изменить пароль</string>
+    <string name="btnLogOut">Выйти</string>
+    <string name="txtAccount">Аккаунт:</string>
+    <string name="txtToken">Токен:</string>
 </resources>

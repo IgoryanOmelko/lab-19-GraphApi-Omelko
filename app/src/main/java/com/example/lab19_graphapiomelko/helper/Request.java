@@ -89,10 +89,10 @@ public class Request {
 //                    });
 
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    e.printStackTrace();
-                    onFail(e.toString());
+                    ex.printStackTrace();
+                    onFail(ex.toString());
 
                     isSuccessful=false;
                     Log.e("test","Fail");

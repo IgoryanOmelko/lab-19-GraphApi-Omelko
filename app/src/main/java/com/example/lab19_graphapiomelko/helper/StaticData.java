@@ -9,10 +9,12 @@ public final class StaticData {
     public static GraphDB DB;
     public static int ff=0;
     public static RequestCode LoginToMenuCode = new RequestCode();
+    public static RequestCode RegisterToMenuCode = new RequestCode();
     public static RequestCode LoginToRegisterCode = new RequestCode();
     public static ArrayList<Session> Sessions = new ArrayList<Session>();
     public static void SetCodes() {
         StaticData.LoginToMenuCode.setCode(001);
+        StaticData.RegisterToMenuCode.setCode(011);
         StaticData.LoginToRegisterCode.setCode(002);
     }
 }

@@ -6,11 +6,11 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvTitleMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="TextView"
+        android:text="@string/txtMenu"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -20,18 +20,18 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvUser"
+            android:id="@+id/tvUserMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="@string/txtAccount" />
 
         <TextView
-            android:id="@+id/tvUserName"
+            android:id="@+id/tvUserNameMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,18 +41,18 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvToken"
+            android:id="@+id/tvTokenMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="@string/txtToken" />
 
         <TextView
-            android:id="@+id/tvCurrentToken"
+            android:id="@+id/tvCurrentTokenMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,34 +62,34 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnSessions"
+            android:id="@+id/btnSessionsMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/btnSessions" />
 
         <Button
-            android:id="@+id/btnGraphs"
+            android:id="@+id/btnGraphsMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/btnGraphs" />
 
         <Button
-            android:id="@+id/btnDeleteUser"
+            android:id="@+id/btnDeleteUserMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/btnAccountDelete" />
 
         <Button
-            android:id="@+id/btnLogout"
+            android:id="@+id/btnCGPWMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/btnChangePassword" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnLogoutMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/btnLogOut" />
     </LinearLayout>
 
 </LinearLayout>
